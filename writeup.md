@@ -185,8 +185,10 @@ For the fourth image, the model is very sure that this is a ***children crossing
 
 ![Prediction 4][image13]
 
-For the fifth image, the model is very sure that this is a ***stop sign***  (probability of 0.99), but the image is actually contain a speed limit (20 km/h). Looks like the model is still not good enough to recognize the shape of number. The top five soft max probabilities were shown below:
+For the fifth image, the model is very sure that this is a ***stop sign***  (probability of 0.99), but the image is actually contain a speed limit (20 km/h). The top five soft max probabilities were shown below:
 
 ![Prediction 5][image14]
 
+###Analysis to failed prediction to image taken from web
 
+The reason of why prediction for last image that is Speed limite (20km/h) failing because the amount of training set is very less. It is explained in the histogram above, class 0 (speed limit 20km/h) is only 180 samples.  Also the preprocessing of training data still not good enough like no histogram equalization, and no data augmentation for training data that makes recognition to traffic signs containing number is still failing. 
